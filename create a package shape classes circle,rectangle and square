@@ -1,0 +1,71 @@
+1.AIM:
+            To design a java package shapes containing classes circle , rectangle and square.
+
+2.ALGORITHM:
+	Create a package named shapes
+	Inside the package:
+•	Define a circle class with radius as data and methods to compute area & perimeter
+•	Define a rectangle class with length and breadth as data and methods to compute area & perimeter
+•	Define a square class with side as data and methods to compute area & perimeter
+	In another program (outside the package), import the package shapes
+	Create objects of circle , rectangle and square
+	Call their methods to display area and perimeter
+
+
+
+
+
+3.JAVA CODE:
+ import java.util.*;
+class Circle {
+private double radius;
+public Circle(double radius) {
+ this.radius = radius;
+    }
+ public double area() {
+ return Math.PI * radius * radius;
+    }
+public double perimeter() {
+        return 2 * Math.PI * radius;
+    }
+}
+class Rectangle {
+    private double length, breadth;
+public Rectangle(double length, double breadth) {
+        this.length = length;
+        this.breadth = breadth;
+    }
+public double area() {
+        return length * breadth;
+    }
+ public double perimeter() {
+        return 2 * (length + breadth);
+    }
+}
+class Square {
+    private double side;
+ public Square(double side) {
+        this.side = side;
+    }
+ public double area() {
+        return side * side;
+    }
+ public double perimeter() {
+        return 4 * side;
+    }
+}
+public class ShapesDemo {
+    public static void main(String[] args) {
+        Circle c = new Circle(5);
+        Rectangle r = new Rectangle(4, 6);
+        Square s = new Square(4);
+System.out.println("Circle: Area = " + c.area() + ", Perimeter = " + c.perimeter());
+System.out.println("Rectangle: Area = " + r.area() + ", Perimeter = " + r.perimeter());
+System.out.println("Square: Area = " + s.area() + ", Perimeter = " + s.perimeter());
+    }
+    }
+
+4.OUTPUT:
+Circle: Area = 78.53981633974483, Perimeter = 31.41592653589793
+Rectangle: Area = 24.0, Perimeter = 20.0
+Square: Area = 16.0, Perimeter = 16.0
